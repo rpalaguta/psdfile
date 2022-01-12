@@ -1,0 +1,160 @@
+@import 'variables.scss';
+
+.banner-section {
+  min-height: 100vh;
+  background-image: url(img/banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: black;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f38181+0,fce38a+100 */
+    background: linear-gradient(to bottom,  #f38181 0%,#fce38a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f38181', endColorstr='#fce38a',GradientType=0 ); /* IE6-9 */
+    opacity: 0.8;
+  }
+  nav {
+    padding: 29px 0;
+    font-family: $title-font;
+    color: $white-text;
+
+    .navigation {
+      position: relative;
+      z-index: 1;
+
+      ul {
+        li {
+          padding: 5px;
+          margin-right: 10px;
+
+          a {
+            color: $white-text;
+            padding: 5px 0;
+            text-transform: uppercase;
+
+            &.active {
+              color: $yellow-color;
+              border-bottom: 2px solid $yellow-color;
+            }
+          }
+
+          &:nth-child(6) {
+            background-image: url(img/search.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+          }
+
+          &:last-child {
+            background-image: url(img/cart.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    .logo {
+      position: relative;
+      z-index: 1;
+      font-weight: bold;
+      padding: 5px 15px;
+      font-size: $title-font-size;
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 1;
+    color: $white-text;
+    text-align: center;
+
+    h2 {
+      font-size: 72px;
+      font-family: $cursive-font;
+      margin-top: 60px;
+      text-transform: capitalize;
+    }
+    h1 {
+      font-size: $banner-title-font-size;
+      font-family: $title-font;
+      font-weight: bold;
+      margin-top: 30px;
+      position: relative;
+      padding-bottom: 50px;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 30px);
+        height: 5px;
+        width: 60px;
+        background-color: $white-text;
+      }
+    }
+    a {
+      font-family: $title-font;
+      font-weight: bold;
+      color: $white-text;
+      border: 2px solid $white-text;
+      padding: 12px 28px;
+      margin-top: 60px;
+    }
+  }
+
+  .banner-slides {
+    position: relative;
+    z-index: 2;
+    color: $white-text;
+    margin-top: 60px;
+    padding: 30px 0;
+
+    &>div {
+      font-family: $title-font;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 25%;
+      margin: 0 15px;
+      position: relative;
+      padding: 25px 0;
+
+      &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        background-color: $white-text;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+      }
+
+      &.active {
+        &::after {
+          content: '';
+          top: 0;
+          left: 0;
+          background-color: $orange-color;
+          height: 3px;
+          width: 30%;
+          position: absolute;
+        }
+      }
+      
+      &>span {
+        font-size: 24px;
+      }
+    }
+  }
+}
