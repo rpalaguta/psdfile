@@ -1,0 +1,75 @@
+@import 'variables.scss';
+
+.about-us-section {
+    width: 100%;
+    min-height: 1000px;
+    
+    .container {
+        .about-main {
+            height: 70%;
+            width: 100%;
+            .about-pictures {
+                width: 100%;
+                height: 450px;
+                .ppl-icon {
+                    margin: 10px auto;
+                    background-image: url(img/USERS.png);
+                    width: 32px;
+                    height: 23px;
+                    color: $white-text;
+                }
+                .hover-text {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $white-text;
+                    font-family: $regular-font;
+                }
+
+                .ab-picture1 {
+                    width: 380px;
+                    height: 250px;
+                    background-image: url(img/Layer44.png);
+                }
+                .ab-picture2 {
+                    width: 380px;
+                    height: 250px;
+                    background-image: url(img/Layer39.png);
+                }
+                .ab-picture3 {
+                    width: 380px;
+                    height: 250px;
+                    background-image: url(img/Layer41.png);
+                }
+            }
+        }
+    }
+    .facts {
+        height: 270px;
+        width: 100%;
+        background-color: $green-color;
+        h2 {
+            font-size: 72px;
+            font-weight: bold;
+            font-family: $title-font;
+            padding-bottom: 20px;
+        }
+        p {
+            font-size: $main-font-size;
+            font-family: $title-font;
+        }
+        .square {
+            text-align: center;
+            padding-top: 7%;
+            width: 25%;
+            height: 100%;
+            margin: auto;
+            border-left: 1px solid #b5eae0;
+            border-right: 1px solid #b5eae0;
+            color: $white-text;
+            text-transform: uppercase;
+        }
+    }
+
+
+}

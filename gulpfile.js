@@ -50,4 +50,4 @@ function serve() {
   watch('src/styles/**.scss', series(scss)).on('change', sync.reload)
 }
 
-exports.start = series(html, scss, serve);
+exports.start = series(html, scss, img, serve);
